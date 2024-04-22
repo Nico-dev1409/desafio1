@@ -1,0 +1,151 @@
+@keyframes button {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@font-face {
+    font-family: "title";
+    src: url("src\\fonts\\PermanentMarker-Regular.ttf");
+}
+@font-face {
+    font-family: "span";
+    src: url("src\\fonts\\Dekko-Regular.ttf");
+}
+@font-face {
+    font-family: "paragraph";
+    src: url("src\\fonts\\BarlowCondensed-ThinItalic.ttf");
+}
+.container-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container-title h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 15px;
+    color: #fff4f4;
+    font-family: "title";
+    text-align: center;
+}
+.container-title span{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px;
+    text-align: center;
+    color: #fff4f4;
+    font-family: "span";
+}
+.container-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#taskInput{
+    width: 70%;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    outline: none;
+    font-size: 1em;
+    border: solid 2px #ffffffaf;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#taskInput::placeholder{
+    color: #ffffff;
+    font-weight: bold;
+}
+.container-principal button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #000000;
+    background: linear-gradient(to right bottom, #84fa6cbb, #78fc5ecb, #3fe71de7);
+    font-weight: bold;
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    animation: button 2s infinite normal;
+}
+.submit{
+    width: 20px;
+    height: 20px;
+    color: #000000;
+}
+.container-task{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+.container-task p{
+    color: #ffffff;
+    font-size: 2em;
+    letter-spacing: 1px;
+    font-family: "paragraph";
+}
+.list-tasks{
+    list-style: none;
+    width: 100%;
+    padding: 5px 10px;
+    max-height: 200px;
+    overflow: auto;
+}
+.list-tasks li{
+    width: 100%;
+    border: solid 2px #ffffffaf;
+    background-color: transparent;
+    color: #fff;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    align-items: center;
+    border-radius: 10px;
+    overflow: auto;
+}
+.list-tasks button{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: solid 2px #ffffffaf;
+    transition: all .5s;
+}
+
+.list-tasks button:hover{
+    background-color: #ff0000e0;
+}
+.list-tasks button svg{
+    color: #ffffff;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+}
+hr{
+    color: #75ff5a;
+    border: solid 2px;
+    width: 100px;
+    margin: 15px;
+}
+.error-container{
+    display: flex;
+    justify-content: center;
+}
+.error-container strong{
+    color: #ff0000;
+    font-weight: bold;
+    text-shadow: #fff 10px 5px 5px;
+}
